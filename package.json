@@ -2,6 +2,7 @@
   "name": "canonical-task",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://praveshpansari.github.io/canonical-task",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -18,8 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-css": "sass -w --load-path=node_modules src:dist --style=compressed",
-    "watch-css": "npm build-css && sass -w --load-path=node_modules src:dist --style=compressed"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }

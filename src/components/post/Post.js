@@ -13,7 +13,7 @@ const Post = ({
   const publishedDate = new Date(date).toLocaleDateString("en-GB", {
     year: "numeric",
     month: "long",
-    date: "numeric",
+    day: "2-digit",
   });
 
   return (

@@ -6,6 +6,7 @@ const App = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    document.title = "Canonical Task";
     fetch(
       "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json"
     )
@@ -14,10 +15,10 @@ const App = () => {
   }, []);
 
   return (
-    <main>
+    <main className="l-main">
       <div className="row u-sv3">
         <h1>Canonical Task</h1>
-        <em>&mdash; by Pravesh Pansari</em>
+        <em className="u-sv3">&mdash; by Pravesh Pansari</em>
       </div>
       <div className="row u-equal-height u-clearfix">
         {posts.map((post, index) => {
